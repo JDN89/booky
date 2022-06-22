@@ -1,4 +1,22 @@
+using api;
+using api.Data;
+using api.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("BooksDB");
+var useInMemory = true;
+
+    if (useInMemory)
+    {
+       builder.Services.AddDbContext<BookContext>(options => options.UseInMemoryDatabase(databaseName: "test"));                
+    }
+    else
+    {
+       builder.Services.AddDbContext<BookContext>(options => options.UseSqlServer(connectionString));
+    }
+
+
 
 // Add services to the container.
 
@@ -21,5 +39,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();
