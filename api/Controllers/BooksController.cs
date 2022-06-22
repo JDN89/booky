@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class BooksController : ControllerBase
 {
     private readonly BookContext _context;
@@ -32,13 +32,13 @@ public class BooksController : ControllerBase
                 return NotFound();
             }
             return Ok(books);
-            
-            
+
+
 
         }
         catch (Exception ex)
         {
             throw new Exception();
-        } 
+        }
     }
 }
