@@ -29,7 +29,7 @@ apiClient.interceptors.response.use(async (response) => {
 
 export default {
 
-  // ===========  User Requests  ===============
+  // ===========  Book Requests  ===============
 
   async getAllBooks() {
     return await apiClient.get('books')
