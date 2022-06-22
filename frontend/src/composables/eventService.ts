@@ -15,7 +15,7 @@ apiClient.interceptors.response.use(async (response) => {
 
   switch (status) {
     case 400:
-      console.error(new Error('display an not found error'))
+      console.error(new Error(`display an BadRequest error found error. Detais: ${data} , ${config} , ${headers}`))
       break
 
     case 401:
