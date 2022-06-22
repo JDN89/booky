@@ -31,7 +31,7 @@ export default {
 
   // ===========  User Requests  ===============
 
-  async registerUser() {
+  async getAllBooks() {
     return await apiClient.get('books')
   },
 
