@@ -1,3 +1,5 @@
+## Booky
+Simple book ERP system to practice Microsoft Azure
 ## ToDo
 - disable env variables
 - connect to backend

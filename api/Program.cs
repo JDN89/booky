@@ -20,6 +20,7 @@ else
 
 builder.Services.AddControllers();
 builder.Services.AddCors();
+builder.Services.AddSpaStaticFiles(config => { config.RootPath = "dist"; });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,7 +33,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.UseSpaStaticFiles();
 app.UseHttpsRedirection();
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseAuthorization();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jan/Coding/Projects/booky/api/api.csproj": {}
+    "/home/jan/Coding/my-playground/dotnet/docker/booky/api/api.csproj": {}
   },
   "projects": {
-    "/home/jan/Coding/Projects/booky/api/api.csproj": {
+    "/home/jan/Coding/my-playground/dotnet/docker/booky/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jan/Coding/Projects/booky/api/api.csproj",
+        "projectUniqueName": "/home/jan/Coding/my-playground/dotnet/docker/booky/api/api.csproj",
         "projectName": "api",
-        "projectPath": "/home/jan/Coding/Projects/booky/api/api.csproj",
+        "projectPath": "/home/jan/Coding/my-playground/dotnet/docker/booky/api/api.csproj",
         "packagesPath": "/home/jan/.nuget/packages/",
-        "outputPath": "/home/jan/Coding/Projects/booky/api/obj/",
+        "outputPath": "/home/jan/Coding/my-playground/dotnet/docker/booky/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jan/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
